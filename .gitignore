@@ -199,3 +199,7 @@ sketch
 !.vscode/*.code-snippets
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
+
+# Docusaurus-generated directories
+build/
+.docusaurus/

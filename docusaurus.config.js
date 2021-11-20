@@ -34,7 +34,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -51,7 +50,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'}
+          // TODO: Add new docs as for "User Manual" and "Admin Manual"
         ],
       },
       footer: {

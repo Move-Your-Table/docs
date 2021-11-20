@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'MYT Documentation',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://move-your-table-docs.herokuapp.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Move Your Table', // Usually your GitHub org/user name.
+  projectName: 'myt', // Usually your repo name.
 
   presets: [
     [
@@ -23,14 +23,10 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/docs/"
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -38,29 +34,23 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Move Your Table',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'MYT Logo',
+          src: 'img/myt.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // TODO: Add new docs as for "User Manual" and "Admin Manual"
         ],
       },
       footer: {
@@ -76,19 +66,40 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            'title': 'Deployments',
+            'items': [
+              {
+                label: 'Main Application',
+                href: 'https://move-your-table-main.herokuapp.com/'
+              },
+              {
+                label: 'Documentation',
+                href: 'https://move-your-table-docs.herokuapp.com/'
+              }
+            ]
+          },
+          {
+            title: 'Code',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Automate Server',
+                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/automateapi',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Back-end Server',
+                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/back-end',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Front-end application',
+                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/front-end',
+              },
+              {
+                label: 'Gateway Server',
+                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/gateway'
+              },
+              {
+                label: 'Mobile Application',
+                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/mobile'
               },
             ],
           },
@@ -100,13 +111,13 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitLab',
+                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Move Your Table, Inc. Built with ♥ and Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

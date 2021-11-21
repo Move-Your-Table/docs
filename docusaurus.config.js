@@ -117,7 +117,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Move Your Table, Inc. Built with ♥ and Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Move Your Table, Inc. Built & written by Bo Robbrecht with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

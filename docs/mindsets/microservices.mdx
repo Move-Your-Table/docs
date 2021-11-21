@@ -3,3 +3,37 @@ sidebar_position: 1
 ---
 
 # Micro-services
+## What?
+Micro-services are a relatively new thing in the technology sector, but is a fitting design pattern within the cloud revolution of today. 
+
+The main idea is that every part **interchangeable** is and fulfills 1 function, thus being easily **scalable**.
+These micro-services are contained in **containers**, making it that the code can run platform-independent.
+
+## Components
+### Service
+A **service** is a individual component of the micro-services framework. In order for a service to be a service, it should adhere to the following principles:
+- **Isolated**: A service activity should be isolated and should not depend on any other running services.
+    If this would not be the case, the framework would fall apart when one of these services when (temporarily) offline.
+- **Interchangeable**: A service should be able to be switch out, without any other services noticing that this happened.
+    This can be achieved by **standardizing the API calls** and make sure that the request & response stays consistent between new service versions.
+- **Independent**: Because the framework's supposed to be scalable, you'll need to make sure that the code & it's runtime environment is **platform-independent**.
+    This can be achieved using **containers** and runtime environments designed for it, such as Docker 
+### Gateway
+The **Gateway** is the access point for other apps that wish to communicate with the services within in micro-services framework & handles authentication.
+This is mostly takes form of a **REST API**.
+
+You can compare it to a traditional REST API interface in a monolithic application.
+
+:::tip So what's the difference?
+
+The main different is that **the gateway does not house any data**, which would directly expose the database to the end user. 
+Instead, the gateway makes calls to other services in order to retrieve data, which results in better access control between apps.
+
+:::
+
+## Advantages
+But why should you use micro-services? Well, ...
+
+- It gives you **freedom** in what technologies you use, because the runtime makes the containers independent.
+- Micro-services allows for **high-scalable** apps, which is important when running apps that are used worldwide.
+- Deployment can be **automated** & **versioned**, thanks to the project containing all setup information needed & being able to create tagged images of your services.

@@ -1,53 +1,41 @@
 import React from 'react';
-import clsx from 'clsx';
+import Feature from './Feature';
 import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Hybrid Work, Made easy',
+    Svg: require('../../static/img/undraw_digital_nomad.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        MYT allows you to control how you work,
+        by offering tools to make sure you can reserve your desk of choice & know your colleagues work lifestyle.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Hybrid Management, Made easy',
+    Svg: require('../../static/img/undraw_control_panel.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Our MYT admin panel allows you to easily manage your company's buildings,
+        room & desks and know which ones have problems & need attention.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Available for everyone, everywhere',
+    Svg: require('../../static/img/undraw_explore.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Thanks to wide range of applications, an innovative infrastructure and easy-to-use interfaces,
+        you can rest assure that your whole company will be able to find the work lifestyle they desire.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+
 
 export default function HomepageFeatures() {
   return (
@@ -62,3 +50,5 @@ export default function HomepageFeatures() {
     </section>
   );
 }
+
+

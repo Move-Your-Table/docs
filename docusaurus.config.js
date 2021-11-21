@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MYT Documentation',
-  tagline: 'Dinosaurs are cool',
+  title: 'Move Your Table',
+  tagline: 'The ultimate Hybrid Work Management Tool',
   url: 'https://move-your-table-docs.herokuapp.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/myt.png',
   organizationName: 'Move Your Table', // Usually your GitHub org/user name.
   projectName: 'myt', // Usually your repo name.
 

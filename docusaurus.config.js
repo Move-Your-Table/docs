@@ -23,7 +23,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/"
+          editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main"
         },
         blog: {
           showReadingTime: true,

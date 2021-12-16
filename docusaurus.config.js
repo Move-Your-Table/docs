@@ -113,7 +113,7 @@ const config = {
                 href: 'https://move-your-table-main.herokuapp.com/'
               },
               {
-                label: 'Documentation',
+                label: 'Documentation Server',
                 href: 'https://move-your-table-docs.herokuapp.com/'
               }
             ]

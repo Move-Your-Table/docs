@@ -22,17 +22,38 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: 'docs',
+          path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main"
-        },
-        blog: {
-          showReadingTime: true,
+          editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main",
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ]
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-user',
+        path: 'docs-user',
+        routeBasePath: 'docs-user',
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main",
+      },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-admin',
+        path: 'docs-admin',
+        routeBasePath: 'docs-admin',
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main",
+      },
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -50,7 +71,18 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          // TODO: Add new docs as for "User Manual" and "Admin Manual"
+          {
+            to: '/docs-user/Intro',    // ./docs-api/Intro.md
+            label: 'User Manual',
+            position: 'left',
+            activeBaseRegex: `/docs-user/`,
+          },
+          {
+            to: '/docs-admin/Intro',  // ./docs-system/Intro.md
+            label: 'Admin Manual',
+            position: 'left',
+            activeBaseRegex: `/docs-system/`,
+          },
         ],
       },
       footer: {
@@ -60,8 +92,16 @@ const config = {
             title: 'Content',
             items: [
               {
-                label: 'Documentation',
+                label: 'Technical Manual',
                 to: '/docs/intro',
+              },
+              {
+                label: 'User Manual',
+                to: '/docs-user/intro'
+              },
+              {
+                label: 'Admin Manual',
+                to: '/docs-admin/intro'
               }
             ],
           },

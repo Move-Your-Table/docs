@@ -1,0 +1,46 @@
+---
+sidebar_position: 6
+---
+
+# Docker FAQ
+
+Docker, for beginners, might seems very complex and in a way, it is.
+Here are some problems you can encounter while working with docker:
+
+---
+
+**Q:** Wait, how do I even install Docker?<br/>
+**A:** Docker is best used with [Docker Desktop](https://www.docker.com/products/docker-desktop). 
+
+:::tip WSL2
+We suggest using Docker Desktop running in WSL for the best performance. More information you can find [here](https://docs.docker.com/desktop/windows/wsl/)
+:::
+
+---
+
+**Q:** I've started a production container, but my code changes aren't visible! <br/>
+**A:** Although most of the commands provided within the application, it is possible that the container refuses to switch over to the new image. In order to fix this, do the following:
+1. Delete the needed container
+    ```bash
+    $ docker ps
+    # CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS          PORTS                    NAMES
+    # c580bed39c87   myt/image   "docker-entrypoint.s…"   29 hours ago   Up 30 minutes   0.0.0.0:3306->3306/tcp   MariaDB
+    ```
+
+    > :bulb: Take note of the image name, you'll need this later.
+
+2. Remove the container
+    ```bash
+    $ docker rm docker rm c580bed39c87
+    ```
+3. Remove the image. All of our images start with **`myt/`**, so depending on which image you need to remove:
+    ```bash
+    $ docker rm -i myt/image
+    # Untagged: myt/back-end:prod
+    # Deleted: sha256:516943390f127bfbc72c0b6f15866d2a653cd29fdd7fa21ea37bdb06d03b3976
+    ```
+4. Rebuild the image. You can do this by executing the command the you executed originally
+    ```bash
+    # Assuming you were building the Production Gateway
+    $ yarn start:container:dev
+    ```

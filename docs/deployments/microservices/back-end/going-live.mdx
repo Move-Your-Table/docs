@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+---
+
+# Going live
+
+:::danger WIP
+
+For some reason, this container has problems with exposing the GraphQL endpoint, so for now, we suggest using the dev container instead.
+
+:::
+
+Thanks to Docker, you can easily create a production image that you can use by using this command:
+
+```bash
+$ yarn run start:container:prod
+```
+
+:::danger NPM Required
+For this, you'll need to have Node installed. If you don't have this available, you can use this command instead:
+```bash
+$ docker-compose --profile prod up -d --build
+```
+:::
+:::danger RabbitMQ overlap
+If you've already set up the [Automate Server](../automate-server/index), you won't be able to use the previous command given. Instead, execute the following set of commands:
+```bash
+$ docker-compose up -d --build nestjs_prod
+$ docker-compose up -d --build mongodb_prod
+```
+:::
+
+

@@ -4,10 +4,34 @@ sidebar_position: 2
 
 # Getting started
 
-import ReactStarterGuide from "../../components/guides/_react-starter-guide.mdx"
-
 :::tip codebase
 You can find the codebase [here](https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/docusaurus)
 :::
 
-<ReactStarterGuide/>
+1. Build an optimized version of the application
+    ```bash
+    $ yarn build
+    ```
+
+:::danger Not able to minimize
+
+It could be that yarn might fail to minify your build. Look [here](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) for more information around this 
+
+:::
+
+2. Install the Serve dependency
+    ```
+    $ npm install -g serve
+    ```
+
+:::tip Multiple ways are available
+
+This is not the only way to serve your application. You can discover all solutions [here](https://create-react-app.dev/docs/deployment/)
+
+:::
+
+3. Serve your application
+   ```bash
+   $ serve -s build
+   ```
+

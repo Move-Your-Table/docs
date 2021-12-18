@@ -1,0 +1,17 @@
+---
+sidebar_position: 3
+---
+# Going live
+
+Thanks to Docker, you can easily create a production image that you can use by using this command:
+
+```bash
+$ docker-compose --profile prod up -d --build 
+```
+
+:::danger RabbitMQ overlap
+If you've already set up the [Back-end Server](../back-end/index), you won't be able to use the previous command given. Instead, execute the following set of commands:
+```bash
+$ docker-compose up -d --build rust_prod
+```
+:::

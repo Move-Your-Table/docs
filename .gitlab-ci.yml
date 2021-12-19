@@ -1,6 +1,6 @@
 stages:
-  - heroku
   - build
+  - deploy
 
 build app:
   type: build
@@ -13,7 +13,7 @@ build app:
 
 heroku:
   type: deploy
-  stage: heroku
+  stage: deploy
   image: ruby:latest
   before_script:
   - apt-get update -qy

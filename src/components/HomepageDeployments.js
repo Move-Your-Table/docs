@@ -22,6 +22,16 @@ const DeploymentList = [
                 <a href="https://move-your-table-docs.herokuapp.com"> Try it here!</a>
             </>
         ),
+    },
+    {
+        title: 'MYT Gateway',
+        Svg: require('../../static/img/undraw_code_typing.svg').default,
+        description: (
+            <>
+                MYT gateway will be the giving you access to MYT's Micro-Service Framework (MYT-MSF)
+                and all it's amazing capabilities. <a href="https://myt-gateway.azurewebsites.net">Try it here!</a>
+            </>
+        ),
     }
 ]
 

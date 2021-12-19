@@ -4,6 +4,25 @@ sidebar_position: 2
 
 # Getting started
 
-import ReactStartGuide from "../../components/getting-started/_react-starter-guide.mdx"
+:::tip codebase
+You can find the codebase [here](https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/front-end)
+:::
 
-<ReactStartGuide/>
+1. Clone the code with `git clone`
+2. Run Yarn install
+   ```bash
+   $ npm install -g yarn
+   $ yarn install
+   ```
+3. Copy the `.env.example` file, rename it to `.env` and complete using the [`.env` reference](#env-configuration)
+4. Start a development server
+   ```bash
+   $ yarn start
+   ```
+
+> ✅ **Done!** You can reach the application at [localhost:3000](http://localhost:3000)
+
+## `.env` configuration
+|Key|Value explanation|Required for Development?|... Production?|Value example|
+|---|---|---|---|---|
+|API URL|The API endpoint that is used to connect to the gateway|✔|✔|http://localhost:8080/rest/|

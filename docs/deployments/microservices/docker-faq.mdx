@@ -1,0 +1,62 @@
+---
+sidebar_position: 6
+---
+
+# Docker FAQ
+
+Docker, for beginners, might seems very complex and in a way, it is.
+Here are some problems you can encounter while working with docker:
+
+---
+
+**Q:** Wait, how do I even install Docker?<br/>
+**A:** Docker is best used with [Docker Desktop](https://www.docker.com/products/docker-desktop). 
+
+:::tip WSL2
+We suggest using Docker Desktop running in WSL for the best performance. More information you can find [here](https://docs.docker.com/desktop/windows/wsl/)
+:::
+
+---
+
+**Q:** I've started a container, but my code changes aren't visible! <br/>
+**A:** Although most of the commands provided within the application, it is possible that the container refuses to switch over to the new image. In order to fix this, do the following:
+1. Delete the needed container
+    ```bash
+    $ docker ps
+    # CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS          PORTS                    NAMES
+    # c580bed39c87   myt/image   "docker-entrypoint.s…"   29 hours ago   Up 30 minutes   0.0.0.0:3306->3306/tcp   MariaDB
+    ```
+
+    > :bulb: Take note of the image name, you'll need this later.
+
+2. Remove the container
+    ```bash
+    $ docker rm docker rm c580bed39c87
+    ```
+3. Remove the image. All of our images start with **`myt/`**:
+    ```bash
+    $ docker rm -i myt/image
+    # Untagged: myt/back-end:prod
+    # Deleted: sha256:516943390f127bfbc72c0b6f15866d2a653cd29fdd7fa21ea37bdb06d03b3976
+    ```
+4. Rebuild the image. You can do this by executing the command the you executed originally
+    ```bash
+    # Assuming you were building the Production Gateway
+    $ yarn start:container:dev
+    ```
+
+:::danger That's docker!
+This doesn't only apply to an application within a container, but also databases, etc...
+:::
+
+---
+
+**Q:** My development MongoDB didn't get seeded! What's going on? <br/>
+**A:** Although the MongoDB image comes with database seeding, sometimes it might happen that the container refuses to seed the database.
+If this should be the case, We suggest seeding the database yourself. You can use the variables defined in your `.env` file to access the database trough a console client.
+
+:::tip What client should I use?
+We suggest using [**DataGrip**](https://www.jetbrains.com/datagrip/), but as long as it has a query console, you're good to go.
+:::
+
+To seed the database, copy the content of the [`init_db.js`](https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/back-end/-/blob/master/docker/startup_db.js) file in the back-end repo and execute it!

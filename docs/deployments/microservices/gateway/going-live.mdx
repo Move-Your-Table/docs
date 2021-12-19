@@ -1,0 +1,19 @@
+---
+sidebar_position: 3
+---
+
+# Going live
+
+Thanks to Docker, you can easily create a production image that you can use by using this command:
+
+```bash
+$ yarn run start:container:prod
+```
+
+:::danger NPM Required
+For this, you'll need to have Node installed. If you don't have this available, you can use this command instead:
+```bash
+$ docker-compose up -d --build tsed_prod
+```
+:::
+

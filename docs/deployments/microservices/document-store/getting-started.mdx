@@ -1,0 +1,24 @@
+# Getting started
+
+:::danger You're sure you're right?
+
+Normally, the database is automatically build when bringing up the containers in the [back-end](https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/back-end/).
+
+:::
+## Requirements
+- [Docker Desktop](https://www.docker.com/get-started)
+In order to manually bring up a instance of the database, you'll need to do the following things:
+1. Clone the codebase of the [Back-end repo](https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/back-end/).
+    ```bash
+    $ git git@git.ti.howest.be:TI/2021-2022/s5/trending-topics/projects/hybrid-work1/back-end.git
+    ```
+2. Define the `.env` file as detailed in the [`.env` configuration section](../back-end/getting-started.mdx).
+3. Within the root of the project, run the following command:
+    ```bash
+    # If you want a development database
+    docker-compose up mongodb_dev
+
+    # If you want a production database
+    docker-compose up mongodb_prod 
+    ```
+> ✔ Done, normally, if you've chosen the development database, you should be able to reach the MongoDB through the defined database port.

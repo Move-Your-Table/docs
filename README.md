@@ -11,17 +11,14 @@ MYT Docs is a documentation server that is powered by [Docusaurus 2](https://doc
     $ yarn install
     ```
 
-    >>>
-    :bulb: We suggest using Yarn for all commands.
-    If you don't have it, you can install it globally.
-    ```bash
-    $ npm install -g yarn
-    ```
-    >>>
 
-    >>>
-    :warning: You can *technically* build with `npm`, but we do not recommend this, as the project was build with `yarn`.
-    >>>
+    > :bulb: We suggest using Yarn for all commands.
+    > If you don't have it, you can install it globally.
+    > ```bash
+    > $ npm install -g yarn
+    > ```
+
+    > :warning: You can *technically* build with `npm`, but we do not recommend this, as the project was build with `yarn`.
 
 3. In the root of the project run the following command:
     ```bash

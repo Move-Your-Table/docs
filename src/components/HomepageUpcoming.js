@@ -3,16 +3,6 @@ import styles from './HomepageFeatures.module.css';
 import Feature from './Feature';
 
 const DeploymentList = [
-    {
-        title: 'MYT Gateway',
-        Svg: require('../../static/img/undraw_code_typing.svg').default,
-        description: (
-            <>
-                MYT gateway will be the giving you access to MYT's Micro-Service Framework (MYT-MSF)
-                and all it's amazing capabilities. Stay tuned!
-            </>
-        ),
-    }
 ]
 
 export default function HomepageUpcoming() {

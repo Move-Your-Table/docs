@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmove_your_table=self.webpackChunkmove_your_table||[]).push([[5645],{6626:function(e){e.exports=JSON.parse('{"pluginId":"docs-user","version":"current","label":"Next","banner":null,"badge":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"intro","href":"/docs-user/intro"}]}}')}}]);

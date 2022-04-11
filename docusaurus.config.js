@@ -8,14 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Move Your Table',
   tagline: 'The ultimate Hybrid Work Management Tool',
-  url: 'https://move-your-table-docs.herokuapp.com/',
-  baseUrl: '/',
+  url: 'https://move-your-table.github.io',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/myt.png',
-  organizationName: 'Move Your Table', // Usually your GitHub org/user name.
-  projectName: 'myt', // Usually your repo name.
-
+  organizationName: 'move-your-table', // Usually your GitHub org/user name.
+  projectName: 'docs',
+  trailingSlash: false, // Usually your repo name.
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -25,7 +25,7 @@ const config = {
           routeBasePath: 'docs',
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main",
+          editUrl: "https://github.com/Move-Your-Table/docs/tree/main",
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -41,7 +41,7 @@ const config = {
         path: 'docs-user',
         routeBasePath: 'docs-user',
         sidebarPath: require.resolve('./sidebars.js'),
-        editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main",
+        editUrl: "https://github.com/Move-Your-Table/docs/tree/main",
       },
     ],
     [
@@ -51,7 +51,7 @@ const config = {
         path: 'docs-admin',
         routeBasePath: 'docs-admin',
         sidebarPath: require.resolve('./sidebars.js'),
-        editUrl: "https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/documentation/-/tree/main",
+        editUrl: "https://github.com/Move-Your-Table/docs/tree/main",
       },
     ]
   ],
@@ -93,15 +93,15 @@ const config = {
             items: [
               {
                 label: 'Technical Manual',
-                to: '/docs/intro',
+                to: '/docs/docs/intro',
               },
               {
                 label: 'User Manual',
-                to: '/docs-user/intro'
+                to: '/docs/docs-user/intro'
               },
               {
                 label: 'Admin Manual',
-                to: '/docs-admin/intro'
+                to: '/docs/docs-admin/intro'
               }
             ],
           },
@@ -123,23 +123,23 @@ const config = {
             items: [
               {
                 label: 'Automate Server',
-                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/automateapi',
+                href: 'https://github.com/Move-Your-Table/automation-api',
               },
               {
                 label: 'Back-end Server',
-                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/back-end',
+                href: 'https://github.com/Move-Your-Table/back-end',
               },
               {
                 label: 'Front-end application',
-                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/front-end',
+                href: 'https://github.com/Move-Your-Table/front-end',
               },
               {
                 label: 'Gateway Server',
-                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/gateway'
+                href: 'https://github.com/Move-Your-Table/gateway'
               },
               {
                 label: 'Mobile Application',
-                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1/mobile'
+                href: 'https://github.com/Move-Your-Table/mobile'
               },
             ],
           },
@@ -148,7 +148,7 @@ const config = {
             items: [
               {
                 label: 'GitLab',
-                href: 'https://git.ti.howest.be/TI/2021-2022/s5/trending-topics/projects/hybrid-work1',
+                href: 'https://github.com/Move-Your-Table',
               },
             ],
           },

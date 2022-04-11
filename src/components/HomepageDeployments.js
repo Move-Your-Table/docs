@@ -29,7 +29,7 @@ const DeploymentList = [
         description: (
             <>
                 MYT gateway will be the giving you access to MYT's Micro-Service Framework (MYT-MSF)
-                and all it's amazing capabilities. <a href="https://myt-gateway.azurewebsites.net">Try it here!</a>
+                and all it's amazing capabilities. <i>No longer available, sorry :(</i>
             </>
         ),
     }
